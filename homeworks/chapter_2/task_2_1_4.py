@@ -4,10 +4,10 @@ def debug_control(*args, **kwargs):
         if type(i) == str: str_+=1
         if type(i) == int: int_+=1
         if type(i) == float: float_+=1
-    for i in kwargs:
-        if type(i) == str: str_+=1
-        if type(i) == int: int_+=1
-        if type(i) == float: float_+=1
+    for i, x in kwargs.items():
+        if type(x) == str: str_+=1
+        if type(x) == int: int_+=1
+        if type(x) == float: float_+=1
     print(f'str: {str_}, int: {int_}, float: {float_}')
     
 debug_control("Hello!", 1000, 7, 993.0, name="Petr", task="Eliminate")
